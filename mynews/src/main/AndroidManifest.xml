@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.it.hr.mynews">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.it.hr.mynews">
 
-    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity"
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:name="com.it.hr.utils.NewsApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".IndexActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -11,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

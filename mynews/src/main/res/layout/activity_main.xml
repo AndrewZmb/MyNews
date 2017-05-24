@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.it.hr.view.NoScrollViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </com.it.hr.view.NoScrollViewPager>
+
+    <RadioGroup
+        android:id="@+id/mainRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbHome"
+            style="@style/btnStyle"
+            android:drawableTop="@drawable/selector_home"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rbTime"
+            style="@style/btnStyle"
+            android:drawableTop="@drawable/selector_time"
+            android:text="时间链"/>
+
+        <RadioButton
+            android:id="@+id/rbTv"
+            style="@style/btnStyle"
+            android:drawableTop="@drawable/selector_tv"
+            android:text="电视+" />
+        <RadioButton
+            android:id="@+id/rbFind"
+            style="@style/btnStyle"
+            android:drawableTop="@drawable/selector_find"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rbMe"
+            style="@style/btnStyle"
+            android:drawableTop="@drawable/selector_me"
+            android:text="我" />
+    </RadioGroup>
+</LinearLayout>
