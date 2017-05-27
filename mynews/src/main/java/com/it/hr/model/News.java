@@ -5,17 +5,25 @@ package com.it.hr.model;
  */
 
 public class News {
+    private Integer id;
     private String title;
-    private String time;
+    private String date;
     private String imgUrl;
-    private  String contentUrl;
+    private  String url;
 
-    public String getTime() {
-        return time;
+    public void setId(Integer id){
+        this.id = id;
+    }
+    public Integer getId(){
+        return this.id;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getImgUrl() {
@@ -26,12 +34,12 @@ public class News {
         this.imgUrl = imgUrl;
     }
 
-    public String getContentUrl() {
-        return contentUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public void setContentUrl(String contentUrl) {
-        this.contentUrl = contentUrl;
+    public void setUrl(String contentUrl) {
+        this.url = url;
     }
 
     public String getTitle() {

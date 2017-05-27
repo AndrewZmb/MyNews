@@ -17,7 +17,7 @@ public class RefreshListView  {
     public static void main(String args[]) {
         List<News> list = new ArrayList<News>();
         News news = new News();
-        news.setContentUrl("aaaa");
+        news.setUrl("aaaa");
         news.setTitle("bbbb");
         news.setImgUrl("cccc");
         Map<String,Object> dataMap = new HashMap<String,Object>();

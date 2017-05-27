@@ -52,7 +52,7 @@ public class HomePageFragment extends Fragment {
         vp_index_content =(ViewPager)view.findViewById(R.id.vp_index_content);
 
         //适配器
-        vp_index_content.setAdapter(new ContenFragmentPage(getActivity().getSupportFragmentManager()));
+        vp_index_content.setAdapter(new ContenFragmentPage(getChildFragmentManager()));
         //首页标题导航TabLayout 与内容ViewPager关联
         tl_tabs_title.setupWithViewPager(vp_index_content);
     }

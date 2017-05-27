@@ -16,6 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.it.hr.model.News;
 import com.it.hr.mynews.R;
@@ -77,14 +80,20 @@ public class TimePageFragment extends Fragment {
         setCurrentTime();
 
         // 先发送http请求获取新闻集合
-        RequestParams params = new RequestParams("http://hiwbs101083.jsp.jspee.com.cn/NewServlet");
+        RequestParams params = new RequestParams("http://hiwbs101083.jsp.jspee.com.cn/NewsServlet");
         params.addQueryStringParameter("name", "xUtils");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                JsonObject newsJsonObject = new JsonParser().parse(result).getAsJsonObject();
+                final String sysNow = newsJsonObject.get("sytTime").getAsString();
+                tv_now.setText(sysNow);
+
+                JsonArray JsonArray = newsJsonObject.get("newsList").getAsJsonArray();
+
                 //解析返回的新闻
-                final List<News> newsList =  new Gson().fromJson(result,new TypeToken<List<News>>() { }.getType());
+                final List<News> newsList =  new Gson().fromJson(newsJsonObject.get("newsList").getAsJsonArray(),new TypeToken<List<News>>() { }.getType());
                 //适配器
                 listview.setAdapter(new BaseAdapter() {
                     @Override
@@ -118,7 +127,7 @@ public class TimePageFragment extends Fragment {
                         TextView tv_title = (TextView)view.findViewById(R.id.tv_title);
                         //图片
                         ImageView iv_image = (ImageView)view.findViewById(R.id.iv_image);
-                        tv_time.setText(news.getTime());
+                        tv_time.setText(news.getDate());
                         tv_title.setText(news.getTitle());
 
                         // 设置加载图片的参数
