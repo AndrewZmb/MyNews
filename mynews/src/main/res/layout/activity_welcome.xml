@@ -23,17 +23,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <!-- 如果在代码中添加动态添加组件
-           <View
-               android:background="@drawable/welcome_point_gray"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>-->
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigator_common_height"
+                />
         </LinearLayout>
-        <View
+       <!-- <View
             android:id="@+id/red_point"
             android:background="@drawable/welcome_point_red"
             android:layout_width="10dp"
-            android:layout_height="10dp"/>
+            android:layout_height="10dp"/>-->
 
     </RelativeLayout>
 

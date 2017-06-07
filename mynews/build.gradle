@@ -40,6 +40,9 @@ dependencies {
     compile 'org.xutils:xutils:3.5.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.android.support:design:25.0.1'
-    compile 'cn.jiguang.sdk:jpush:3.0.5' // 此处以JPush 3.0.5 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.1.2' // 此处以JCore 1.1.2 版本为例。
+    compile 'cn.jiguang.sdk:jpush:3.0.5'
+    // 此处以JPush 3.0.5 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.2'
+    // 此处以JCore 1.1.2 版本为例。
+    compile project(':magicindicator')
 }

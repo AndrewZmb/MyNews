@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.it.hr.view.NoScrollViewPager
+    <com.it.hr.view.MyViewPager
         android:id="@+id/main_vp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
-    </com.it.hr.view.NoScrollViewPager>
+    </com.it.hr.view.MyViewPager>
 
     <RadioGroup
         android:id="@+id/mainRg"

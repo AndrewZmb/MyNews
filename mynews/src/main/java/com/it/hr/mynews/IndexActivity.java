@@ -11,6 +11,7 @@ import org.xutils.x;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
 @ContentView(R.layout.activity_index)
 public class IndexActivity extends Activity {
 
@@ -30,7 +31,7 @@ public class IndexActivity extends Activity {
             @Override
             public void run() {
                 // 默认跳转到欢迎页面,如果欢迎页面已显示,则直接跳转主页面
-                Boolean showWelcome =  SharePreUtil.getBoolean(IndexActivity.this,"show_welcome",false);
+                Boolean showWelcome =  SharePreUtil.getBoolean(IndexActivity.this,"show_welcome",true);
                 if(showWelcome){
                     Intent intent = new Intent(IndexActivity.this,WelcomeActivity.class);
                     // 标准模式在同一个APP中所有Activity都在同一个栈
